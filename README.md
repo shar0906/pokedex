@@ -1,25 +1,13 @@
-# README
+# Kanto Pokédex
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Built a Kanto Pokédex using the [https://pokepapi.co](# Poke Api)
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby Version
+2.6.3p62
 
-* System dependencies
+* Rails Version
+5.2.3
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# pokedex
+* Deployed on Heroku here: https://kanto-pokedex.herokuapp.com
