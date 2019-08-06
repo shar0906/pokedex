@@ -1,6 +1,6 @@
 # Kanto Pokédex
 
-Built a Kanto Pokédex using the [https://pokepapi.co](#Poke Api)
+Built a Kanto Pokédex using the [Poke Api]: https://pokepapi.co
 
 Things you may want to cover:
 
