@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kanto Pokedex</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= favicon_link_tag asset_path('pokeball-favicon.png'), :rel => 'icon', :type =>  'image/png'%>
+  </head>
+
+  <nav class="navbar navbar-light bg-light justify-content-between">
+    <% if !current_page?(root_path) %>  
+      <button class="btn btn-outline-info my-2 my-sm-0"><%= link_to 'Back to Pokédex', :back %></button>
+      <% else %>
+      <h1 class="navbar">Kanto Pokédex</h1>
+      <form class="form-inline">
+      <%= form_tag pokemons_index_url, :method => "get" do %>
+        <%= text_field_tag :search_term, params[:search_term], placeholder: "Search Pokémon", class: 'form-control mr-sm-2' %>
+        <span class="input-group-btn">
+          <%= submit_tag "Search", class: 'btn btn-outline-success my-2 my-sm-0' %>
+        </span>
+        </form>
+      <% end %>
+  <% end %>
+  </nav>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<div class="container">
+    <table class="table table-striped table-bordered">
+        <thead class="thead-light">
+            <tr>
+                <th style="text-align: center;" colspan="3"><h2> <%= @pokemon.name.capitalize %> </h2></th>
+            </tr>
+            <tr>
+                <th scope="row">ID &#35;</th>
+                <td scope="row"><%= @pokemon.id%></td>
+                <td style="text-align: center;" rowspan="5" scope="rowgroup"> <%= image_tag(@pokemon.sprites.front_default) %> </td>
+            </tr>
+            <tr>
+                <th scope="row">Shape</th>
+                <td scope="row"> <%= @shape.name.capitalize %></td>
+            </tr>
+            <tr>
+                <th scope="row">Types</th>
+                <td>
+                <% @types.each do | poketype | %>
+                    <li> <%=  poketype.type.name.capitalize %> </li>
+                <% end %>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Abilities</th>
+                <td>
+                <% @abilities.each do | ability | %>
+                    <li> <%=  ability.ability.name.capitalize %> </li>
+                <% end %>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Capture Rate</th>
+                <td scope="row"><%= @capture_rate['capture_rate'].to_s + '%' %></td>
+            </tr>
+        </thead>
+    </table>
+</div>
+
+
+
