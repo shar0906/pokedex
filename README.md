@@ -2,8 +2,6 @@
 
 Built a Kanto Pokédex using the [Poke Api]: https://pokepapi.co
 
-Things you may want to cover:
-
 * Ruby Version
 2.6.3p62
 
